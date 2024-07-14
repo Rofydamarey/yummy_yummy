@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png " />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Yummy</title>
+</head>
+
+<body>
+
+    <div class="loading position-fixed top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center">
+        <span class="loader"></span>
+    </div>
+
+    <div class="side-nav min-vh-100  position-fixed d-flex top-0 " style="z-index: 9999;" >
+        <div class="tabs  bg-black " >
+            <div class="links d-flex flex-column   " >
+                <a class="py-3 find animate__animated animate__fadeInUp animate__slow" onclick="showSearchInputs();">Search</a>
+                <a class="py-3 animate__animated animate__fadeInUp animate__slow" onclick="getCategories();" >Categories</a>
+                <a class="py-3 animate__animated animate__fadeInUp animate__slow"onclick="getArea();">Area</a>
+                <a class="py-3 animate__animated animate__fadeInUp animate__slow"onclick="getIngredients();">Ingredients</a>
+                <a class="py-3 animate__animated animate__fadeInUp animate__slow" onclick="showContacts();" >Contact Us</a>
+        </div>
+
+            <div class="footer"  >
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                <p class="pe-2">Copyright Â© 2019 All Rights <br>Reserved.</p>
+
+                </div>
+        
+            </div>
+        </div>
+        <div class="nav-header position-relative d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="images/logo.png" alt="" >
+            <i class="toggle fa-solid fa-bars fa-xmark fa-2x" onclick="changeicon(this)"></i>
+            
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        
+        </div>   
+        </div>
+
+    <div class="container me-5 w-75 mt-5 " id="searchContainer"> 
+
+    </div> 
+
+    <div class="container  position-relative me-3 position-relative">
+        <div class="loading position-fixed top-0 start-0 end-0 bottom-0 d-flex  justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+        <div class="container">
+           
+            <div class="row py-5 g-4  " id="rowData">
+            
+            </div>
+        </div>
+       
+    </div>
+
+
+
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
