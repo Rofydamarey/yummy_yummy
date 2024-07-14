@@ -26,11 +26,11 @@ $(function () {
 })
 
 $('.toggle').on('click',function () {
-    $('.tabs').animate({width:'toggle'},1000)
+    $('.tabs').toggle(1000)
    
    
  })
-changeicon =(icon) => icon.classList.toggle('fa-xmark') 
+changeicon =(icon) => icon.classList.toggle('fa-x') 
 /*first show */
 function showSearch(){
     document.getElementById('searchContainer').classList.remove('d-none');
@@ -319,48 +319,6 @@ function dispalyingredientsMeals(ingredientsmeal){
    
 }
 /*search */
-// function showSearchInputs() {
-//     searchContainer.innerHTML = `
-//     <div class="row py-4 ">
-//         <div class="col-md-6 ">
-//             <input onkeyup="searchByName(this.value)" class="form-control bg-transparent text-white" type="text" placeholder="Search By Name">
-//         </div>
-//         <div class="col-md-6">
-//             <input onkeyup="searchByFLetter(this.value)" maxlength="1" class="form-control bg-transparent text-white" type="text" placeholder="Search By First Letter">
-//         </div>
-//     </div>`
-
-//     rowData.innerHTML = ""
-// }
-
-// async function searchByName(i) {
-    
-//     rowData.innerHTML = ""
-//     $(".loading").fadeIn(300)
-
-//     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${i}`)
-//     response = await response.json()
-
-//     response.meals ? displaymeal(response.meals) : displaymeal([])
-//     $(".loading").fadeOut(300)
-
-// }
-
-// async function searchByFLetter(i) {
-    
-//     rowData.innerHTML = ""
-//     $(".loading").fadeIn(300)
-
-//     i == "" ? i = "a" : "";
-//     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${i}`)
-//     response = await response.json()
-
-//     response.meals ? displaymeal(response.meals) : displaymeal([])
-//     $(".loading").fadeOut(300)
-
-// }
-
-
 function showSearchInputs() {
     searchContainer.innerHTML = `
     <div class="row py-4 ">
@@ -374,8 +332,6 @@ function showSearchInputs() {
 
     rowData.innerHTML = ""
  }
-
-
 
 async function searchByName(){
     rowData.innerHTML = ""
